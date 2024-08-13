@@ -1,0 +1,175 @@
+/* Variables de color */
+:root {
+  --color-fondo: #f9f9f9;
+  --color-texto: #333;
+  --color-boton: #007bff;
+  --color-boton-hover: #0056b3;
+  --color-borde: #ddd;
+  --color-restriccion: #ff0202;
+  --color-copyright: #777;
+}
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 5px;
+  resize: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--color-boton);
+}
+
+.restriccion {
+  color: var(--color-restriccion);
+  margin-top: 0.5rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-boton);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+.dinamico h2, .dinamico h3 {
+  margin-bottom: 1rem;
+}
+
+.copiar {
+  margin-top: 1rem;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: var(--color-copyright);
+}
+
+/* Responsivo */
+
+/* Móviles (hasta 375px) */
+@media (max-width: 375px) {
+  main {
+      padding: 1rem 0.5rem;
+  }
+
+  .botones {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  button {
+      width: 100%;
+  }
+}
+
+/* Tablets (hasta 768px) */
+@media (min-width: 376px) and (max-width: 768px) {
+  main {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  section {
+      margin: 0 1.5rem;
+  }
+
+  .botones {
+      gap: 1rem;
+  }
+}
+
+/* Desktop (desde 769px hasta 1440px) */
+@media (min-width: 769px) and (max-width: 1440px) {
+  main {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 2rem;
+  }
+
+  section {
+      max-width: 600px;
+      margin-bottom: 0;
+  }
+
+  .botones {
+      justify-content: flex-start;
+      gap: 1rem;
+  }
+}
+
+/* Pantallas grandes (más de 1440px) */
+@media (min-width: 1441px) {
+  main {
+      padding: 3rem;
+      justify-content: space-evenly;
+  }
+
+  section {
+      max-width: 700px;
+  }
+}
