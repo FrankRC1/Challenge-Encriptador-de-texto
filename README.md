@@ -45,3 +45,5 @@ Use el botón "Copiar" para copiar el resultado al portapapeles.
 2. CSS3: Estilización del sitio web con un enfoque minimalista y responsivo.
 3. JavaScript: Lógica de encriptación y desencriptación de texto.
 # Challenge-Encriptador-de-texto
+# AluraLatam
+# oraclenexteducation!
